@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabeceraComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+  }
+
+  abrirMenu() {
+    let boton = document.querySelector('.burger');
+    let navbar = document.getElementById('navbar');
+    boton.classList.toggle('is-active')
+    navbar.classList.toggle('is-active');
   }
 
 }
