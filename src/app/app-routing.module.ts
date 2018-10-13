@@ -9,6 +9,11 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: './paginas/admin/admin.module#AdminModule'
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: ''
   }
 ];
 
