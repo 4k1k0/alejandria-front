@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-software',
@@ -51,11 +52,13 @@ export class SoftwareComponent implements OnInit {
     }
   ];
 
-  constructor() {
-    this.sistemaOperativo = 'iOS';
+  constructor( private route: ActivatedRoute ) {
   }
 
   ngOnInit() {
+    this.route.params.subscribe( params => {
+      this.sistemaOperativo = params['id'];
+    });
   }
 
 }
