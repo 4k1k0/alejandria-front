@@ -1,9 +1,38 @@
-<div class="container">
-  <div class="notification">
+<div class="container is-fluid">
+  <div class="notification has-background-white">
 
-    <h1><strong>Android</strong></h1>
+    <h1><strong>{{ sistemaOperativo }}</strong></h1>
 
-    <h2>Categoría:</h2>
+    <ng-container *ngFor="let categoria of categorias">
+      <div class="categoria-contenedor" *ngIf="categoria.entradas != 0">
+        <h2 class="categoria-titulo">
+          {{ categoria.nombre }}
+        </h2>
+        <div class="columns is-multiline">
+          <div class="column is-4" *ngFor="let programa of programas">
+            <div class="programa-contenedor">
+              <div class="columns">
+                <div class="column is-4 programa-img-contenedor">
+                  <img [src]="programa.logo">
+                </div>
+                <div class="column programa-datos-contenedor">
+                  <h2 class="programa-nombre">{{ programa.nombre }}</h2>
+                  <p class="programa-licencia">{{ programa.licencia }}</p>
+                  <p class="programa-url">
+                    <a class="has-text-link" [href]="programa.url">Sitio web</a>
+                    <a class="has-text-link" [href]="programa.git">Github</a>
+                  </p>
+                  <p>
+                    {{ programa.desc }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
 
   </div>
 </div>
