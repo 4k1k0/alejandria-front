@@ -1,0 +1,1 @@
+#login-contenedor{position:absolute;width:100%;height:100%;display:flex;align-items:center;justify-content:center}#login-contenedor #login-formulario-contenedor{width:50%;background:white;border:1px solid #F5F5F5;border-radius:10px;padding:1rem}@media (max-width: 768px){#login-contenedor #login-formulario-contenedor{width:90%}}
