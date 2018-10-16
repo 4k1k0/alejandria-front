@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: './paginas/admin/admin.module#AdminModule'
   },
   {
+    path: 'login',
+    loadChildren: './paginas/login/login.module#LoginModule'
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: ''
