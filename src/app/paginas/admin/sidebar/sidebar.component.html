@@ -1,3 +1,11 @@
-<p>
-  sidebar works!
-</p>
+<p>aside works!</p>
+
+<nav>
+  <ul>
+    <li *ngFor="let elemento of elementosMenu">
+      <p>
+        {{ elemento.url }}
+      </p>
+    </li>
+  </ul>
+</nav>
